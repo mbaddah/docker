@@ -1,6 +1,3 @@
-
-
-
 ```docker
 
 ### list containers
