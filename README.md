@@ -1,3 +1,3 @@
-# Docker 
+# Docker and Kubernetes
 
-Space to store my docker code samples and notes.
+Space to store my docker and kubernetes code samples and notes.

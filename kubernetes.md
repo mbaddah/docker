@@ -64,6 +64,17 @@ Teardown/Cleanup:
 
 
 
+Pods:
+- Containers are encapsulated in pods, a single instance of an application.
+- A pod is smallest object you can create in Kb
+- When scaling, you don't increment container in pod, instead you spin up new pod.
+- If node has no more capacity for more pods, then spin up new node.
+- pod and container have 1:1 relationship if same type of container. BUT a 'helper container' can co-exist within the same pod.
+-  For example `kubectl run nginx --image nginx` will deploy nginx inside a pod. `run <pod-name>`
+- `kubectl get pods`
+- `kubectl describe pod nginx`
+
+
 
 Kubectl commands:
 - `kubectl version` 
