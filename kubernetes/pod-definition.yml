@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+# note cannot create custom metadata
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp 
+# specify container/image 
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx

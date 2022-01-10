@@ -13,7 +13,8 @@ In prod:
 - Master node control worker/minion nodes
 - 
 
-Components:
+## Components:
+
 - API server
 - etcd -  k/v store 
 - scheduler - distributing containers across nodes
@@ -64,6 +65,15 @@ Teardown/Cleanup:
 
 
 
+Kubectl commands:
+- `kubectl version` 
+- `kubectl cluster-info`
+- `kubectl run hello-minikube`
+- `kubectl get nodes`
+
+
+## Working with YAML files and pods: 
+
 Pods:
 - Containers are encapsulated in pods, a single instance of an application.
 - A pod is smallest object you can create in Kb
@@ -71,16 +81,22 @@ Pods:
 - If node has no more capacity for more pods, then spin up new node.
 - pod and container have 1:1 relationship if same type of container. BUT a 'helper container' can co-exist within the same pod.
 -  For example `kubectl run nginx --image nginx` will deploy nginx inside a pod. `run <pod-name>`
+
 - `kubectl get pods`
+
 - `kubectl describe pod nginx`
 
+To create pod from yaml file:
+`kubectl create -f name-of-pod-file.yml`
+
+YAML def file must contain the following:
+- `apiVersion`
+- `kind`
+- `metadata`
+- `spec`
 
 
-Kubectl commands:
-- `kubectl version` 
-- `kubectl cluster-info`
-- `kubectl run hello-minikube`
-- `kubectl get nodes`
+## Minikube commands
 
 Minikube commands:
 
