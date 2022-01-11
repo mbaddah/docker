@@ -89,11 +89,16 @@ Pods:
 To create pod from yaml file:
 `kubectl create -f name-of-pod-file.yml`
 
+or
+
+`kubectl apply -f pod.yml`
+
 YAML def file must contain the following:
 - `apiVersion`
 - `kind`
 - `metadata`
 - `spec`
+
 
 
 ## Minikube commands
