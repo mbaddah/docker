@@ -83,6 +83,7 @@ Pods:
 -  For example `kubectl run nginx --image nginx` will deploy nginx inside a pod. `run <pod-name>`
 
 - `kubectl get pods`
+- `kubecyl get pod -o wide` get 'wider' view of pods
 
 - `kubectl describe pod nginx`
 
@@ -93,6 +94,10 @@ or
 
 `kubectl apply -f pod.yml`
 
+- To edit pod `kubectl edit pod nameOfpod`
+
+- To apply changes from defition file run `kubectl apply -f pod-definition.yaml`
+
 YAML def file must contain the following:
 - `apiVersion`
 - `kind`
@@ -100,6 +105,9 @@ YAML def file must contain the following:
 - `spec`
 
 
+To test:
+
+- `kubectl run redis --image=redis123 --dry-run=client -o yaml > pod.yaml`
 
 ## Minikube commands
 
